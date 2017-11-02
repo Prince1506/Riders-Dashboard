@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Rider Live Drive</string>
+    <string name="more">more</string>
+    <string name="speed">Speed</string>
+    <string name="time">Time</string>
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancel</string>
+    <string name="end_session_status">Do you want to end session?</string>
+    <string name="history">History</string>
+    <string name="google_map_key">AIzaSyD5lNJvSB1P5UCQpIjjBnLuFD3SUSjaf_E</string>
+    <string name="permission_request_msg">\"Rider live drive needs to access all the Permissions\"</string>
 </resources>

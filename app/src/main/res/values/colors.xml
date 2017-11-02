@@ -3,4 +3,9 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="view_color">#000</color>
+    <color name="hex_dary">#10131E</color>
+    <color name="white">#fff</color>
+    <color name="lightSilver">#e6e7e9</color>
+    <color name="ligth_blue">#4CADE0</color>
 </resources>

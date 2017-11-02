@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/mosMapLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/view_color" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/view_color" />
+
+
+        <LinearLayout
+            android:id="@+id/llFragmentContainerMOSDrive"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <fragment
+                    android:id="@+id/mosMapFragment"
+                    class="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="0dp" />
+
+                <LinearLayout
+                    android:id="@+id/llSpeedBottomMOSDrive"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/speed_bottom_marg"
+                    android:visibility="gone">
+
+                    <ImageButton
+                        android:id="@+id/imgBtnStartMOSDrive"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/red_start_btn" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:id="@+id/llStartStopMOSDrive"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:background="@android:color/transparent"
+                        android:gravity="right"
+                        android:visibility="visible">
+
+
+                        <ImageButton
+                            android:id="@+id/imgBtnStopNewMOSDrive"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|bottom"
+                            android:background="@android:color/transparent"
+                            android:padding="@dimen/stop_padd"
+                            android:src="@drawable/quickdrive_stop_icon"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <HorizontalScrollView
+                        android:id="@+id/hsvSpeedParamsBottom"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#252431"
+                        android:fillViewport="true"
+                        android:scrollbars="none">
+
+                        <LinearLayout
+                            android:id="@+id/llSpeedParamsBottomMOSDrive"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:measureWithLargestChild="false"
+                            android:nestedScrollingEnabled="false"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/fab_labels_margin"
+                            android:visibility="visible">
+
+
+                            <LinearLayout
+
+                                android:id="@+id/llTestSpeedMOSDrive"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/speed_left_mar"
+                                android:layout_marginRight="@dimen/speed_right_mar"
+                                android:layout_weight="1.1"
+                                android:background="#252431"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="@dimen/speed_pad">
+
+
+                                <FrameLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        android:layout_marginBottom="@dimen/speed_inner_bottom_mar"
+                                        android:gravity="center_horizontal|top"
+                                        android:orientation="vertical"
+                                        android:padding="2dp">
+
+                                        <TextView
+                                            android:id="@+id/tvSpeedHeadingMOSDrive"
+                                            style="@style/HeadingFontStyle"
+                                            android:fontFamily="arial"
+                                            android:singleLine="true"
+                                            android:text="@string/speed"
+                                            android:textSize="@dimen/heading" />
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:id="@+id/tvSpeedMOSDrive"
+                                                style="@style/HeadingFontStyle.ThroughputFont"
+                                                android:fontFamily="arial"
+                                                android:paddingTop="2dp"
+                                                android:text="-"
+                                                android:textSize="@dimen/sub_heading" />
+
+                                            <TextView
+                                                android:id="@+id/tvSpeedUnitMOSDrive"
+                                                style="@style/HeadingFontStyle"
+                                                android:layout_height="match_parent"
+                                                android:fontFamily="arial"
+                                                android:gravity="center|bottom"
+                                                android:text="Km/h"
+                                                android:textSize="@dimen/heading_description"
+                                                android:visibility="visible" />
+                                        </LinearLayout>
+
+
+                                        <!--
+                                         <TextView
+                                        style="@style/HeadingFontStyle"
+                                        android:text="" />
+                                        -->
+                                    </LinearLayout>
+                                </FrameLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/llTestDistanceMOSDrive"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/distance_left_marg"
+                                android:layout_marginRight="@dimen/distance_left_marg"
+                                android:layout_weight="1"
+                                android:background="#252431"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="@dimen/distance_pad">
+
+                                <FrameLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        android:layout_marginBottom="@dimen/distance_bottom_marg"
+                                        android:gravity="center_horizontal|top"
+                                        android:orientation="vertical"
+                                        android:padding="2dp">
+
+                                        <TextView
+                                            android:id="@+id/tvDistanceHeadingMOSDrive"
+                                            style="@style/HeadingFontStyle"
+                                            android:fontFamily="arial"
+                                            android:singleLine="true"
+                                            android:text="DISTANCE"
+                                            android:textSize="@dimen/heading" />
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:id="@+id/tvDistanceMOSDrive"
+                                                style="@style/HeadingFontStyle.ThroughputFont"
+                                                android:fontFamily="arial"
+                                                android:paddingTop="2dp"
+                                                android:text="-"
+                                                android:textSize="@dimen/sub_heading" />
+
+                                            <TextView
+                                                android:id="@+id/tvDistanceUnitMOSDrive"
+                                                style="@style/HeadingFontStyle"
+                                                android:layout_height="match_parent"
+                                                android:fontFamily="arial"
+                                                android:gravity="center|bottom"
+                                                android:text="Km"
+                                                android:textSize="@dimen/heading_description"
+                                                android:visibility="visible" />
+                                        </LinearLayout>
+
+
+                                        <!--
+                                         <TextView
+                                        style="@style/HeadingFontStyle"
+                                        android:text="" />
+                                        -->
+                                    </LinearLayout>
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:background="@drawable/qd_distance" />
+                                </FrameLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/llTestTimeMOSDrive"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/time_left_marg"
+                                android:layout_marginRight="@dimen/time_right_marg"
+                                android:layout_weight="1"
+                                android:background="#252431"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="@dimen/time_padd">
+
+                                <FrameLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        android:layout_marginBottom="@dimen/time_inner_bottom_marg"
+                                        android:gravity="center_horizontal|top"
+                                        android:orientation="vertical"
+                                        android:padding="2dp">
+
+                                        <TextView
+                                            android:id="@+id/tvTimeHeadingMOSDrive"
+                                            style="@style/HeadingFontStyle"
+                                            android:layout_marginLeft="2dp"
+                                            android:layout_marginRight="2dp"
+                                            android:fontFamily="arial"
+                                            android:singleLine="true"
+                                            android:text="@string/time"
+                                            android:textSize="@dimen/heading" />
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:id="@+id/tvTimerMOSDrive"
+                                                style="@style/HeadingFontStyle.ThroughputFont"
+                                                android:fontFamily="arial"
+                                                android:paddingTop="2dp"
+                                                android:text="-"
+                                                android:textSize="@dimen/sub_heading" />
+
+                                            <TextView
+                                                android:id="@+id/tvTimeUnitMOSDrive"
+                                                style="@style/HeadingFontStyle"
+                                                android:layout_height="match_parent"
+                                                android:fontFamily="arial"
+                                                android:gravity="center|bottom"
+                                                android:text="hh:mm"
+                                                android:textSize="@dimen/time_size"
+                                                android:visibility="visible" />
+                                        </LinearLayout>
+
+
+                                        <!--
+                                         <TextView
+                                        style="@style/HeadingFontStyle"
+                                        android:text="" />
+                                        -->
+                                    </LinearLayout>
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:background="@drawable/qd_time" />
+                                </FrameLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </HorizontalScrollView>
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="action_bar_bottom_padding">7dp</dimen>
+    <dimen name="action_bar_left_padding">5dp</dimen>
+    <dimen name="action_bar_right_padding">5dp</dimen>
+    <dimen name="action_bar_top_padding">7dp</dimen>
+    <dimen name="actionbar_logo_padding">10dp</dimen>
+    <dimen name="actionbar_heading_right_padding">10dp</dimen>
+    <dimen name="actionbar_heading_left_padding">10dp</dimen>
+    <dimen name="actionbar_logo_margin_left">5dp</dimen>
+    <dimen name="actionbar_logo_right_pad">10dp</dimen>
+    <dimen name="actionbar_more_padding_right">5dp</dimen>
+    <dimen name="more_size">20dp</dimen>
+    <dimen name="actionbar_heading_size">18dp</dimen>
+    <dimen name="distance_left_marg">10dp</dimen>
+    <dimen name="distance_pad">5dp</dimen>
+    <dimen name="speed_left_mar">5dp</dimen>
+    <dimen name="speed_right_mar">5dp</dimen>
+    <dimen name="speed_pad">5dp</dimen>
+    <dimen name="speed_inner_bottom_mar">10dp</dimen>
+    <dimen name="heading">16dp</dimen>
+    <dimen name="sub_heading">14dp</dimen>
+    <dimen name="heading_description">12dp</dimen>
+    <dimen name="fab_labels_margin">8dp</dimen>
+    <dimen name="distance_bottom_marg">10dp</dimen>
+    <dimen name="time_left_marg">10dp</dimen>
+    <dimen name="time_right_marg">10dp</dimen>
+    <dimen name="time_padd">10dp</dimen>
+    <dimen name="time_inner_bottom_marg">10dp</dimen>
+    <dimen name="time_size">10dp</dimen>
+    <dimen name="stop_padd">5dp</dimen>
+    <dimen name="speed_bottom_marg">10dp</dimen>
+    <dimen name="ok_bottom_padding">10dp</dimen>
+    <dimen name="ok_top_padding">10dp</dimen>
+    <dimen name="cancel_bottom_padding">10dp</dimen>
+    <dimen name="cancel_top_pad">10dp</dimen>
+
+    <dimen name="end_test_popup_width">285dp</dimen>
+    <dimen name="end_test_popup_height">120dp</dimen>
+    <dimen name="actionbar_drawable_padding">15dp</dimen>
+    <dimen name="actionbar_heading_name_drawable_pad">15dp</dimen>
+    <dimen name="actionbar_heading_name_text">18dp</dimen>
+    <dimen name="actionbar_more_size">20dp</dimen>
+
+</resources>
